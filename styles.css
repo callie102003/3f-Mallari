@@ -1,115 +1,171 @@
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
-h1, h2, h3 {
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
     color: #333;
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('hero-image.jpg'); /* Replace with your hero image */
-    background-size: cover;
-    color: white;
+    position: relative;
+    background: url('The.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 50px 0;
+    flex-direction: column;
 }
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Use the same background image as the parent */
+    filter: blur(10px); /* Apply the blur effect */
+    z-index: -1; /* Ensure the blur effect stays behind the content */
+}
+
 
 .hero h1 {
     font-size: 3em;
+    margin-bottom: 20px;
 }
 
-.cta-buttons button {
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.cta-buttons .btn {
     background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 15px 25px;
-    margin: 10px;
-    cursor: pointer;
-    font-size: 1.2em;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 5px;
 }
 
-.cta-buttons button:hover {
+.cta-buttons .btn:hover {
     background-color: #0056b3;
 }
 
-/* Services Section */
-.services {
-    padding: 50px 20px;
+/* Services Overview Section */
+.services-overview {
     text-align: center;
+    padding: 50px 20px;
+}
+
+.services-overview h2 {
+    margin-bottom: 40px;
+    color: #555;
 }
 
 .service-cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
 .service-card {
-    background-color: white;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
     padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .service-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+    max-width: 100%;
     border-radius: 10px;
 }
 
-.service-card button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
+.service-card .btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.service-card button:hover {
-    background-color: #218838;
+.service-card .btn:hover {
+    background-color: #0056b3;
 }
 
 /* Testimonials Section */
 .testimonials {
-    background-color: #f0f0f0;
+    background-color: #f8f8f8;
     padding: 50px 20px;
 }
 
 .testimonial-slider {
     display: flex;
-    overflow-x: scroll;
+    justify-content: center;
     gap: 20px;
+    overflow-x: scroll;
 }
 
 .testimonial-card {
-    background-color: white;
-    border-radius: 10px;
+    background-color: #fff;
     padding: 20px;
+    border-radius: 10px;
     width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .testimonial-card img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-card .rating {
+    color: gold;
+}
+
+/* CTA Section */
+.cta {
+    background-color: #007bff;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+.cta .btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #007bff;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.cta .btn:hover {
+    background-color: #f1f1f1;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
 }

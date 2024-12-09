@@ -1,0 +1,187 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Header */
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Filters Sidebar */
+.filters-sidebar {
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    border-right: 2px solid #ddd;
+}
+
+.filters-sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.filters-sidebar form {
+    display: flex;
+    flex-direction: column;
+}
+
+.filters-sidebar label {
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.filters-sidebar input, .filters-sidebar select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.filters-sidebar input[type="number"] {
+    width: 100%;
+}
+
+.filters-sidebar input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.filters-sidebar input[type="submit"]:hover {
+    background-color: #007bff;
+}
+
+/* Service Cards Section */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-left: 320px; /* To create space for the sidebar */
+}
+
+.service-card {
+    background-color: #fff;
+    width: calc(33.33% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 15px;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.service-card h3 {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.service-card .btn {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.service-card .btn:hover {
+    background-color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .filters-sidebar {
+        width: 250px;
+    }
+
+    .services-container {
+        margin-left: 270px;
+    }
+
+    .service-card {
+        width: calc(50% - 20px); /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .filters-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .services-container {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .service-card {
+        width: 100%; /* One column on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        width: 100%; /* Full-width on extra small screens */
+    }
+
+    .filters-sidebar input[type="number"],
+    .filters-sidebar select {
+        font-size: 12px;
+    }
+
+    .filters-sidebar label {
+        font-size: 12px;
+    }
+
+    .filters-sidebar h2 {
+        font-size: 20px;
+    }
+}
